@@ -93,14 +93,14 @@ a {
 /* Page header */
 .page-header {
   border: 1px solid #ececec;
+
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .page-header .container {
   display: flex;
   align-items: center;
-
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 /* site-nav */
@@ -135,7 +135,7 @@ a {
 
 /* information */
 .contacts {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 
   margin-left: auto;
@@ -146,6 +146,15 @@ a {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+}
+
+.contacts-link {
+  color: var(--primary-text-color);
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
 }
 
 .contacts > .item {
@@ -211,6 +220,7 @@ a {
 /* features */
 
 .features {
+  padding-bottom: 0;
 }
 
 .feature-list .title {
@@ -227,7 +237,11 @@ a {
 
 .feature-list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feature-list .item {
+  width: 270px;
 }
 
 .feature-list > .item:not(:last-child) {
@@ -248,19 +262,17 @@ a {
 
 /* чем мы занимаемся (заголовок) */
 
-.work {
-  padding-top: 0;
-}
-
 .work .section-title {
   margin-bottom: 50px;
 }
 
 .work-list {
   display: flex;
-  align-items: center;
 }
 
+.work-list .item {
+  width: 370px;
+}
 .work-list > .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -278,8 +290,6 @@ a {
 }
 
 /* наша команда */
-.team {
-}
 
 .team .section-title {
   margin-bottom: 50px;
@@ -292,7 +302,6 @@ a {
   font-size: 16px;
   line-height: 1.19;
 
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-list {
@@ -301,6 +310,8 @@ a {
 }
 
 .team-list > .item {
+  width: 370px;
+
   text-align: center;
   background: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -312,8 +323,12 @@ a {
   margin-right: 30px;
 }
 
+.team-list-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-para {
-  margin-bottom: 16px;
 }
 
 .team-list .team-para {
@@ -370,15 +385,8 @@ a {
   letter-spacing: 0.06em;
   text-align: center;
 }
-.primary-button {
-}
-
-.secondary-button {
-}
 
 /* Постоянные клиенты */
-.clients {
-}
 
 .clients .section-title {
   margin-bottom: 50px;
@@ -436,6 +444,9 @@ a {
 
 .footer-address {
   margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
 }
 .footer-contacts {
   margin-top: 9px;
