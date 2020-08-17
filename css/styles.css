@@ -533,6 +533,10 @@ a {
   box-sizing: border-box;
 }
 
+.item:nth-child(3n) {
+  margin-right: 0;
+}
+
 .item:nth-child(n + 7) {
   margin-bottom: 0;
 }
